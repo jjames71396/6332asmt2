@@ -12,9 +12,9 @@
             <!-- <img  src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
             <h1 class="display-6 fw-bold text-primary">Earthquake Search</h1>            
           </div>
-        <form method="post" action="{{url_for('count')}}">
+		<form method="post" action="{{url_for('reg')}}">
             <div class="col-md-6 mx-auto text-center">
-                <label for="name" class="form-label fw-bold fs-5">Enter magnitude</label>
+                <label for="name" class="form-label fw-bold fs-5">Enter num random queries (No Cache)</label>
 
                 <!-- <p class="lead mb-2">Could you please tell me your name?</p> -->
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
@@ -23,13 +23,13 @@
 
 				
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2">
-                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Search magnitude</button>
+                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Time queries</button>
                 </div>            
             </div>
         </form>
-		<form method="post" action="{{url_for('range')}}">
+        <form method="post" action="{{url_for('count')}}">
             <div class="col-md-6 mx-auto text-center">
-                <label for="name" class="form-label fw-bold fs-5">Enter date and magnitude range</label>
+                <label for="name" class="form-label fw-bold fs-5">Enter num random queries (Cache)</label>
 
                 <!-- <p class="lead mb-2">Could you please tell me your name?</p> -->
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
@@ -38,13 +38,28 @@
 
 				
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2">
-                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Search Range</button>
+                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Time queries</button>
+                </div>            
+            </div>
+        </form>
+		<form method="post" action="{{url_for('ranges')}}">
+            <div class="col-md-6 mx-auto text-center">
+                <label for="name" class="form-label fw-bold fs-5">Enter magsource and num queries</label>
+
+                <!-- <p class="lead mb-2">Could you please tell me your name?</p> -->
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
+                    <input type="text" class="form-control" id="name" name="name" style="max-width: 256px;">
+                  </div>  
+
+				
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2">
+                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Time queries</button>
                 </div>            
             </div>
         </form>
 		<form method="post" action="{{url_for('location')}}">
             <div class="col-md-6 mx-auto text-center">
-                <label for="name" class="form-label fw-bold fs-5">Enter latitude, longitude, and radius</label>
+                <label for="name" class="form-label fw-bold fs-5">Enter latitude, longitude, radius, and num queries</label>
 
                 <!-- <p class="lead mb-2">Could you please tell me your name?</p> -->
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
@@ -53,7 +68,7 @@
 
 				
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2">
-                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Search location</button>
+                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Time queries</button>
                 </div>            
             </div>
         </form>
